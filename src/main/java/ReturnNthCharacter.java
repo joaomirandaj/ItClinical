@@ -10,7 +10,9 @@ public class ReturnNthCharacter {
         for (int i = nth-1; i < word.length(); i=i+nth) {
             char character = word.charAt(i);
 
-            if (Character.isUpperCase(character)) {
+            if(Character.isUpperCase(character)||
+                    Character.isDigit(character) ||
+                    Character.toString(character).matches("[^A-Za-z0-9]")) {
                 newWord.append(character);
             }
         }

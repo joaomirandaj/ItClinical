@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class Tests {
 
     final String word = "ITCLiNicAl";
+    final String newWord = "!tCL1Nical";
     ReturnNthCharacter returnNthCharacter;
 
     @Before
@@ -31,6 +32,11 @@ public class Tests {
         assertEquals(returnNthCharacter.returnNthCharacterFrom(word, 2), "TLN");
         assertEquals(returnNthCharacter.returnNthCharacterFrom(word, 3), "CNA");
         assertEquals(returnNthCharacter.returnNthCharacterFrom(word, 10), "");
+    }
+
+    @Test
+    public void testSpecialReturnNthCharacter() {
+        assertEquals(returnNthCharacter.returnNthCharacterFrom(newWord, 1), "!CL1N");
     }
 
 
