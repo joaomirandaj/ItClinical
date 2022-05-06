@@ -5,10 +5,13 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
-public class Tests {
+public class TestReturnNthCharacter {
 
     final String word = "ITCLiNicAl";
     final String newWord = "!tCL1Nical";
+    final String counterWord = "ItCLINiCAL";
+
+
     ReturnNthCharacter returnNthCharacter;
 
     @Before
@@ -37,6 +40,11 @@ public class Tests {
     @Test
     public void testSpecialReturnNthCharacter() {
         assertEquals(returnNthCharacter.returnNthCharacterFrom(newWord, 1), "!CL1N");
+    }
+
+    @Test
+    public void testCounter() {
+        assertEquals(returnNthCharacter.returnNthCharacterFrom(counterWord, 1), "ICLINCAL");
     }
 
 
